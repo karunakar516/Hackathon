@@ -25,7 +25,7 @@ const person_schema =new mongoose.Schema({
         type:String
     },
     role:{
-        required:true,
+        required:false,
         type:String,
         enum:['student','sponsor','tutor'],
     },

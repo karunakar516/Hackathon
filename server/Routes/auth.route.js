@@ -5,7 +5,7 @@ const {signUp,login,profile,selfProfile,profileUpdate,deleteProfile,profileById}
 
 
 //signup route
-authRouter.post('/signup',signUp)
+authRouter.post('/register',signUp)
 
 // login route
 authRouter.post('/login',login)

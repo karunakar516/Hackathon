@@ -5,9 +5,11 @@ const {authRouter} = require("./Routes/auth.route")
 const {contentRouter}=require("./Routes/content.route")
 const app = express()
 const port = 8000
+const cors = require('cors')
 
 require('dotenv').config(); 
 //middleware
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
