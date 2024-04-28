@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const {postRouter} = require('./Routes/post.route.js');
 const {authRouter} = require("./Routes/auth.route")
 const {contentRouter}=require("./Routes/content.route")
+const {financialRouter} = require("./Routes/financial.route.js")
 const app = express()
 const port = 8000
 const cors = require('cors')
@@ -17,6 +18,7 @@ app.use(express.urlencoded({extended:false}))
 app.use("/api/posts",postRouter);
 app.use("/api/auth/",authRouter);
 app.use("/api/content/",contentRouter);
+app.use("/api/financialSupport",financialRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
