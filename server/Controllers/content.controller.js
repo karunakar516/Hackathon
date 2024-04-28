@@ -32,30 +32,33 @@ const addContent = async(req,res)=>{
 
 const getSubscribedContent = async (req,res) =>{
     try{
-        const user=req.user
-        const content_objects = await Content.find({})
-        const result=[]
-        for(const obj of content_objects){
-            if (user.subscribed_content.contains(obj.id)){
-                result.unshift(obj)
+        const user = req.user.id;
+        const content_objects = await Content.find({});
+        const user_obj= await person.findById(user);
+        const result = [];
+        const content =user_obj["subscribed_content"]
+        for (const obj of content_objects) {
+            if (content.includes(obj.id)) {
+                result.unshift(obj);
             }
         }
-        res.status(200).json(result)
-    }
-    catch(err){
-        res.status(500).json(res.json)
+        res.status(200).json(result);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
 }
 
 const subscribeContent = async (req,res)=>{
     try{
         const {id} = req.params
-        const userSubscribedContent=req.user.subscribed_content
+        const userSubscribedContent=req.user.subscribed_content || []
+        console.log(userSubscribedContent)
         userSubscribedContent.unshift(id)
+        console.log(userSubscribedContent)
         const userid = req.user.id 
-        const obj = await person.findByIdAndUpdate(userid,{
-            subscribed_content:userSubscribedContent
-        })
+        const obj = await person.findByIdAndUpdate(userid, {
+            subscribed_content: userSubscribedContent
+        }, { new: true })
         if(!obj){
             res.status(404).json({"error":"not found"})
         }
