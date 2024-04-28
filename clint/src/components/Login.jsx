@@ -34,28 +34,39 @@ const Login = () => {
     };
 
     return (
-        <div className="flex flex-col bg-[#e09744]">
-            <div className="bg-slate-200 m-3 p-5">
+        <div className="flex flex-col bg-[#e09744] h-screen justify-center items-center">
+            <p className='text-white text-3xl font-serif'>Login Page</p>
+            <div className="bg-white m-3 p-10 flex flex-col">
                 <form onSubmit={handleSubmit}>
-                    <label>UserName:</label>
-                    <input 
-                        type="text" 
-                        name="username"
-                        value={formData.username}
-                        onChange={handleChange}
-                        required
-                    />
-                    <label>Password:</label>
-                    <input 
-                        type="password"
-                        name="password"
-                        value={formData.password}
-                        onChange={handleChange}
-                        required
-                    />
-                    <button type='submit'>Submit</button>
+                    <div className=" mb-4">
+                        <label className='  mr-2'>UserName:</label>
+                        <input
+                        className=' bg-orange-400 shadow-orange-800 shadow-md rounded-xl p-2'
+                            type="text"
+                            name="username"
+                            value={formData.username}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="">
+                        <label className='mr-3'>Password:</label>
+                        <input
+                         className=' bg-orange-400 shadow-orange-800 shadow-md rounded-xl p-2'
+                            type="password"
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className=" mt-5">
+                        <button type='submit' className=' bg-orange-400 p-2 ml-28 rounded-lg' >Submit</button>
+                    </div>
                 </form>
-                <button onClick={() => navigate('/register')}>Registration</button>
+                <div className="mt-4">
+                    <button className=' bg-orange-400 p-2 ml-24 rounded-lg ' onClick={() => navigate('/register')}>Registration</button>
+                </div>
             </div>
         </div>
     );

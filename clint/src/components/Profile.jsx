@@ -10,12 +10,12 @@ const Profile = () => {
 
    const navigate = useNavigate()
    const handlenav = () =>{
-    navigate('/')
+    navigate('/home')
    }
 
     return (
         <>
-            <div className="flex flex-row flex-wrap bg-gradient-to-r from-blue-600 via-blue-200 to-slate-100 m-5">
+            <div className="flex flex-row flex-wrap bg-gradient-to-r from-orange-600 via-orange-200 to--100 m-5">
                 <div className="flex flex-col flex-wrap py-4 px-4 w-0.5/3 h-full pr-36">
                     <div className="">
                         <img src={logo1} alt="Image" className=" w-52 h-52 ml-28 mt-10" />
@@ -57,16 +57,16 @@ const Profile = () => {
                 </div>
                 <div className=" flex flex-col">
                     <div className=" flex flex-row text-black text-xl mt-2">
-                        <FaArrowLeft className='text-black text-xl ml-3 mt-2' onClick={handlenav} />
-                        <p className=' ml-2 mt-0.5'>Tweets</p>
+                        <FaArrowLeft className='text-white text-xl ml-3 mt-2' onClick={handlenav} />
+                        <p className=' ml-2 mt-0.5 text-white'>Tweets</p>
                     </div>
                     <div className="">
-                        <p className=' text-black mt-4 text-center mr-5 text-2xl'>History</p>
+                        <p className=' text-orange-500 mt-4 text-center mr-5 text-2xl'>History</p>
                     </div>
-                    <div className="text-black overflow-y-auto mt-3" style={{ maxHeight: '550px' }}>
+                    <div className="text-black overflow-y-auto mt-1" style={{ maxHeight: '550px' }}>
                         {
                             Tweets.map((data, index) => (
-                                <div className="flex flex-col flex-wrap bg-white gap-3 mx-44 mt-2 mb-2 p-5 rounded-xl  shadow-blue-300 shadow-sm" key={index}>
+                                <div className="flex flex-col flex-wrap bg-white shadow-orange-600 shadow-lg  gap-3 mx-44 mt-1 mb-5 p-5 rounded-xl" key={index}>
                                     <div className="text-black">
                                         <p>{data.name}</p>
                                     </div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import logo from './logo.jpg'
-// /import logo1 from './logo3.jpg'
-// import logo2 from './logo1.png'
+import logo1 from './logo3.jpg'
+import logo2 from './logo4.jpg'
+import logo3 from './logo2.jpg'
 
 const Content = () => {
     return (
@@ -9,7 +10,7 @@ const Content = () => {
             <div className="flex flex-col flex-wrap mt-8 mx-8">
                 <div className=" flex flex-row flex-wrap w-full h-52 p-4 mb-3">
                     <a href="/profile">
-                        <img src={logo} alt="Image" className=" mix-blend-darken w-32 h-44 ml-4 " />
+                        <img src={logo3} alt="Image" className=" mix-blend-darken w-32 h-44 ml-4 " />
                     </a>
                     <div className=' flex flex-col flex-wrap ml-12 text-[#e09744]'>
                         <div className=" text-2xl mb-5">
@@ -23,7 +24,7 @@ const Content = () => {
                 </div>
                 <div className="flex flex-row flex-wrap w-full h-52 p-4 mb-3">
                     <a href="/profile">
-                        <img src={logo} alt="Image" className=" mix-blend-darken w-32 h-44 ml-4 mr-10" />
+                        <img src={logo} alt="Image" className="w-32 h-44 ml-4 mr-10" />
                     </a>
                     <div className=' flex flex-col text-[#e09744]'>
                         <div className=" text-2xl">
@@ -38,7 +39,7 @@ const Content = () => {
                 </div>
                 <div className="flex flex-row flex-wrap w-full h-52 p-4 mb-3">
                     <a href="/profile">
-                        <img src={logo} alt="Image" className="mix-blend-darken w-32 h-44 ml-4 mr-10" />
+                        <img src={logo1} alt="Image" className="mix-blend-darken w-32 h-44 ml-4 mr-10" />
                     </a>
                     <div className=' flex flex-col text-[#e09744]'>
                         <div className=" text-2xl">
@@ -51,7 +52,7 @@ const Content = () => {
                 </div>
                 <div className="flex flex-row flex-wrap w-full h-52 p-4 mb-3">
                     <a href="/profile">
-                        <img src={logo} alt="Image" className="mix-blend-darken w-32 h-44 ml-4 mr-10" />
+                        <img src={logo2} alt="Image" className="mix-blend-darken w-32 h-44 ml-4 mr-10" />
                     </a>
                     <div className=' flex flex-col text-[#e09744]'>
                         <div className=" text-2xl">

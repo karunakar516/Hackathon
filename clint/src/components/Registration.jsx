@@ -34,12 +34,14 @@ const Registration = () => {
     };
 
     return (
-        <div className="flex flex-col bg-[#e09744]">
-            <div className="flex flex-col bg-slate-200 m-4 p-4">
+        <div className="flex flex-col bg-[#e09744] h-screen justify-center items-center">
+             <p className='text-white text-3xl font-serif'>Registration Page</p>
+            <div className="bg-white m-3 p-8 flex flex-col">
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>Name:</label>
+                    <div className=' mb-2'>
+                        <label className=' mr-10'>Name:</label>
                         <input
+                         className=' bg-orange-400 shadow-orange-800 shadow-md rounded-xl p-2'
                             type="text"
                             name="name"
                             value={formData.name}
@@ -47,9 +49,10 @@ const Registration = () => {
                             required
                         />
                     </div>
-                    <div>
-                        <label>Email:</label>
+                    <div className=' mb-2'>
+                        <label  className=' mr-10'>Email:</label>
                         <input
+                         className=' bg-orange-400 shadow-orange-800 shadow-md rounded-xl p-2'
                             type='email'
                             name="email"
                             value={formData.email}
@@ -57,9 +60,10 @@ const Registration = () => {
                             required
                         />
                     </div>
-                    <div>
-                        <label>Username:</label>
+                    <div className=' mb-3'>
+                        <label  className=' mr-2'>Username:</label>
                         <input
+                         className=' bg-orange-400 shadow-orange-800 shadow-md rounded-xl p-2'
                             type="text"
                             name="username"
                             value={formData.username}
@@ -67,9 +71,10 @@ const Registration = () => {
                             required
                         />
                     </div>
-                    <div>
-                        <label>Password:</label>
+                    <div className=' mb-2'>
+                        <label  className=' mr-4'>Password:</label>
                         <input
+                         className=' bg-orange-400 shadow-orange-800 shadow-md rounded-xl p-2'
                             type="password"
                             name="password"
                             value={formData.password}
@@ -77,12 +82,12 @@ const Registration = () => {
                             required
                         />
                     </div>
-                    <div>
-                        <button type='submit'>Submit</button>
+                    <div className='mt-5'>
+                        <button type='submit' className=' bg-orange-400 p-2 ml-28 rounded-lg' >Submit</button>
                     </div>
                 </form>
-                <div>
-                    <button onClick={() => navigate('/login')}>Login</button>
+                <div className=' mt-4'>
+                    <button  className=' bg-orange-400 p-2 ml-28 rounded-lg ' onClick={() => navigate('/login')}>Login</button>
                 </div>
             </div>
         </div>
