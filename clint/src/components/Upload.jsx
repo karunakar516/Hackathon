@@ -7,8 +7,8 @@ const Upload = () => {
 
     const uploadFile = async (type)=>{
         const data = new FormData();
-        data.append('file',type == 'image' ? img : video);
-        data.append("upload_preset", type == 'image' ? 'image_preset' : 'video_preset');
+        data.append('file',type === 'image' ? img : video);
+        data.append("upload_preset", type === 'image' ? 'image_preset' : 'video_preset');
  
         try{
             let cloudName = 'dsevum1n3';
