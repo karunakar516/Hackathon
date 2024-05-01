@@ -19,6 +19,6 @@ const financialSchema = mongoose.Schema({
     timestamps:true
 })
 
-const financialPost = mongoose.Model("financialPost",financialSchema)
+const financialPost = mongoose.model("financialPost",financialSchema)
 
 module.exports={financialPost}
